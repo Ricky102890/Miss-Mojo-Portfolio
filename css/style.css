@@ -43,6 +43,14 @@ header {
     margin: 0;
     padding: 1rem 2rem;
 }
+nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .nav-logo-wrapper {
     display: flex;
     flex-direction: row;
@@ -65,6 +73,32 @@ header {
     font-family: 'Blacksword';
     letter-spacing: .75rem;
 }
+.nav-link-wrapper {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0;
+}
+.mega-wrapper {
+    display: inline-block;
+    margin: 0 2rem;
+}
+.mega-wrapper button {
+    background: #ffc425;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: 'Caviar', sans-serif;
+    letter-spacing: .75rem;
+    padding: .5rem 2rem;
+    cursor: pointer;
+    transition: all 700ms ease;
+}
+.mega-wrapper button:hover {
+    transform: scale(105%) translateX(20px) translateY(10px);
+}
 .about-me-wrapper {
     width: 100%;
     height: auto;
@@ -74,16 +108,26 @@ header {
     text-align: center;
 }
 .about-me-wrapper h2 {
-    font-size: 2rem;
+    color: var(--theme__clr__gold);
+    text-shadow: 2px 2px 3px gray;
+    font-size: 2.5rem;
+    letter-spacing: .3rem;
     margin: 0 0 2rem;
+}
+.about-me-wrapper h3 {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: .75rem;
 }
 .about-me-text-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
     justify-items: center;
 }
 .about-me-wrapper p {
     width: 50%;
+    letter-spacing: .1rem;
+    color: white;
 }
 .about-me-wrapper .about-img-wrapper {
     width: 50%;
@@ -93,5 +137,34 @@ header {
     height: auto;
     object-fit: cover;
     border-radius: 50%;
+}
+.inspiration-wrapper {
+    width: 100%;
+    height: auto;
+    margin: 6rem auto 0;
+    padding: 2rem 1rem;
+    background: var(--theme__clr__gold);
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.inspiration-wrapper h4 {
+    font-size: 2rem;
+    letter-spacing: .3rem;
+    color: #33ae33;
+    text-shadow: 2px 2px 3px gray;
+}
+.inspiration-wrapper .img-wrapper {
+    width: 100%;
+}
+.img-wrapper .img-carousel-wrapper {
+    width: 100%;
+}
+.img-carousel-wrapper img {
+    width: 187.5px;
+    height: 187.5px;
+    border-radius: 10px;
+    object-fit: cover;
+
 }
 
