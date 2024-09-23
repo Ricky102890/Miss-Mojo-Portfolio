@@ -1,0 +1,158 @@
+/* Fonts & Imports */
+@font-face {
+font-family: '';
+src: url();
+
+}
+
+/* Universal */
+*, *::before, *::after {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: '';
+
+}
+
+/* Root */
+:root {
+
+}
+
+/* 4K Devices/Screens */
+@media (max-width: 2560px) {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 2560px;
+
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
+
+/* 1440p Devices/Screens */
+ @media (max-width: 1440px) {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 1440px;
+}
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
+    
+/* Laptops Default */  
+@media (max-width: 1024px) {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 1024px;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
+
+/* Tablets Default */
+
+@media (max-width: 768px) {
+/* HTML */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    width: 100%;
+    max-width: 768px;
+
+}
+
+/* Viewport Container */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
+
+/* Large Phones / Flagship SmartPhones */
+@media (max-width: 425px) {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 425px;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
+
+/* Regular Phones */
+@media (max-width: 375px) {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 375px;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
+
+/* Smallest Devices */
+@media (max-width: 320px) {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 320px;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
