@@ -1,8 +1,12 @@
 /* Fonts & Imports */
 @font-face {
-font-family: '';
-src: url();
+font-family: 'Blacksword';
+src: url(/assets/fonts/Blacksword.otf);
+}
 
+@font-face {
+font-family: 'Caviar';
+src: url(/assets/fonts/CaviarDreams.ttf);
 }
 
 /* Universal */
@@ -10,149 +14,84 @@ src: url();
 padding: 0;
 margin: 0;
 box-sizing: border-box;
-font-family: '';
-
+font-family: 'Caviar', sans-serif;
 }
 
 /* Root */
 :root {
-
+    --theme__clr__green: #33ae33;
+    --theme__clr__lavender: #a6a6ed;
+    --theme__clr__gold: #ffc425;
+    --theme__clr__black: #000000;
+    --theme__clr__white: #ffffff;
 }
 
-/* 4K Devices/Screens */
-@media (max-width: 2560px) {
 html {
     scroll-behavior: smooth;
 }
 
 body {
     width: 100%;
-    max-width: 2560px;
-
+    height: auto;
+    min-height: 100vh;
+    background: 
 }
-
-.container {
+header {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    height: 100px;
+    background: #000000;
+    margin: 0;
+    padding: 1rem 2rem;
 }
-
+.nav-logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-
-/* 1440p Devices/Screens */
- @media (max-width: 1440px) {
-html {
-    scroll-behavior: smooth;
+.logo-wrapper {
+    display: inline-block;
+    margin: 0 1rem;
 }
-
-body {
+.logo-wrapper img {
+    width: 64px;
+    height: auto;
+}
+.logo-title {
+    display: inline-block;
+}
+.logo-title h2 {
+    color: #ffc425;
+    font-size: 2rem;
+    font-family: 'Blacksword';
+    letter-spacing: .75rem;
+}
+.about-me-wrapper {
     width: 100%;
-    max-width: 1440px;
+    height: auto;
+    margin: 6rem auto 0;
+    padding: 2rem 1rem;
+    background: var(--theme__clr__lavender);
+    text-align: center;
 }
-.container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+.about-me-wrapper h2 {
+    font-size: 2rem;
+    margin: 0 0 2rem;
 }
-
+.about-me-text-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    justify-items: center;
 }
-    
-/* Laptops Default */  
-@media (max-width: 1024px) {
-html {
-    scroll-behavior: smooth;
+.about-me-wrapper p {
+    width: 50%;
 }
-
-body {
-    width: 100%;
-    max-width: 1024px;
+.about-me-wrapper .about-img-wrapper {
+    width: 50%;
 }
-
-.container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-}
-
-/* Tablets Default */
-
-@media (max-width: 768px) {
-/* HTML */
-html {
-    scroll-behavior: smooth;
+.about-img-wrapper img {
+    width: 375px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-/* Body */
-body {
-    width: 100%;
-    max-width: 768px;
-
-}
-
-/* Viewport Container */
-.container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-}
-
-/* Large Phones / Flagship SmartPhones */
-@media (max-width: 425px) {
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    width: 100%;
-    max-width: 425px;
-}
-
-.container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-}
-
-/* Regular Phones */
-@media (max-width: 375px) {
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    width: 100%;
-    max-width: 375px;
-}
-
-.container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-}
-
-/* Smallest Devices */
-@media (max-width: 320px) {
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    width: 100%;
-    max-width: 320px;
-}
-
-.container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-}
