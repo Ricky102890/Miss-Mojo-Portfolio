@@ -8,21 +8,24 @@ src: url(/assets/fonts/Blacksword.otf);
 font-family: 'Caviar';
 src: url(/assets/fonts/CaviarDreams.ttf);
 }
+@font-face {
+    font-family: 'Designer';
+    src: url(/assets/fonts/DESIGNER.otf);
+}
 
 /* Universal */
 *, *::before, *::after {
 padding: 0;
 margin: 0;
 box-sizing: border-box;
-font-family: 'Caviar', sans-serif;
+font-family: 'Designer', sans-serif;
 }
 
 /* Root */
 :root {
-    --theme__clr__green: #33ae33;
     --theme__clr__lavender: #a6a6ed;
     --theme__clr__gold: #ffc425;
-    --theme__clr__black: #000000;
+    --theme__clr__black: rgb(23, 23, 52);
     --theme__clr__white: #ffffff;
 }
 
@@ -34,27 +37,34 @@ body {
     width: 100%;
     height: auto;
     min-height: 100vh;
-    background: 
+    background: var(--theme__clr__black);
 }
 header {
     width: 100%;
-    height: 100px;
-    background: #000000;
-    margin: 0;
-    padding: 1rem 2rem;
+    height: auto;
+    background: var(--theme__clr__black);
+    margin: .5rem 0 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 nav {
     width: 100%;
     height: auto;
+    margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-logo-wrapper {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 2rem;
 }
 .logo-wrapper {
     display: inline-block;
@@ -70,34 +80,63 @@ nav {
 .logo-title h2 {
     color: #ffc425;
     font-size: 2rem;
-    font-family: 'Blacksword';
+    font-family: 'Blacksword', sans-serif;
     letter-spacing: .75rem;
+    word-spacing: -1rem;
 }
 .nav-link-wrapper {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
     padding: 0;
+    background: transparent;
 }
 .mega-wrapper {
     display: inline-block;
     margin: 0 2rem;
 }
-.mega-wrapper button {
-    background: #ffc425;
+.subscribe-wrapper {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 0;
+}
+.subscribe-wrapper button {
+    background: transparent;
     border: none;
     color: white;
     border-radius: 10px;
     font-size: 1.25rem;
     font-weight: 400;
-    font-family: 'Caviar', sans-serif;
+    font-family: 'Designer', sans-serif;
+    letter-spacing: .75rem;
+    padding: .5rem 2rem;
+    cursor: pointer;
+    transition: all 700ms ease;
+}
+.subscribe-wrapper button:hover {
+    transform: scale(105%);
+    color: var(--theme__clr__gold);
+}
+.subscribe-menu-wrapper {
+    display: none;
+}
+.mega-wrapper button {
+    background: transparent;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: 'Designer', sans-serif;
     letter-spacing: .75rem;
     padding: .5rem 2rem;
     cursor: pointer;
     transition: all 700ms ease;
 }
 .mega-wrapper button:hover {
-    transform: scale(105%) translateX(20px) translateY(10px);
+    transform: scale(105%);
+    color: var(--theme__clr__gold);
 }
 .about-me-wrapper {
     width: 100%;
@@ -105,7 +144,6 @@ nav {
     margin: 6rem auto 0;
     padding: 2rem 1rem;
     background: var(--theme__clr__lavender);
-    text-align: center;
 }
 .about-me-wrapper h2 {
     color: var(--theme__clr__gold);
@@ -113,6 +151,7 @@ nav {
     font-size: 2.5rem;
     letter-spacing: .3rem;
     margin: 0 0 2rem;
+    text-align: center;
 }
 .about-me-wrapper h3 {
     color: white;
@@ -120,23 +159,46 @@ nav {
     letter-spacing: .75rem;
 }
 .about-me-text-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    justify-items: center;
+    display: flex;
+    align-items: center;
+}
+.about-me-text-wrapper h3 {
+    display: inline-block;
+    width: 75%;
+    font-size: .85rem;
+    line-height: 2rem;
 }
 .about-me-wrapper p {
-    width: 50%;
+    width: 25%;
     letter-spacing: .1rem;
     color: white;
 }
 .about-me-wrapper .about-img-wrapper {
-    width: 50%;
+    width: 375px;
+    height: 375px;
+    display: flex;
+    overflow-x: hidden;
 }
 .about-img-wrapper img {
     width: 375px;
-    height: auto;
+    height: 375px;
     object-fit: cover;
-    border-radius: 50%;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px black;
+}
+img.show-img {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {
+        opacity: .5;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .inspiration-wrapper {
     width: 100%;
